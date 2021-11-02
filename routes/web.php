@@ -23,4 +23,9 @@ Route::get('/mahasiswa/{nrp}/{nama}', function($nrp, $nama) {
     'name' => '[A-Za-z]+',
     'nrp' => '[0-9]+',
 ]);
+//Kasus index
 Route::get('/person','PersonController@index');
+//Kasus show
+Route::get('/person/show/{param}','PersonController@show');
+//Kasus student
+Route::resource('/student', 'StudentController');

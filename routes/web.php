@@ -23,3 +23,4 @@ Route::get('/mahasiswa/{nrp}/{nama}', function($nrp, $nama) {
     'name' => '[A-Za-z]+',
     'nrp' => '[0-9]+',
 ]);
+Route::get('/person','PersonController@index');

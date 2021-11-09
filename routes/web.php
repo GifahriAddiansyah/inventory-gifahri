@@ -29,3 +29,10 @@ Route::get('/person','PersonController@index');
 Route::get('/person/show/{param}','PersonController@show');
 //Kasus student
 Route::resource('/student', 'StudentController');
+
+//Kasus homepage
+Route::get('/homepage', function (){
+    return view('home' , ["name" => "Mohamad Gifahri Addiansyah "]);
+});
+
+Route::get('/person/send-data', 'PersonController@sendData');

@@ -7,12 +7,13 @@ use Illuminate\Http\Request;
 class PersonController extends Controller
 {
     //Membuat artribut name
-    private $name = " Mohamad Gifahri";
+    private $code = "190313015";
+    private $name   = "Mohamad Gifahri Addiansyah";
 
     //Membuat index
     public function index() {
         //Mengembalikan nilai artibut name
-        return $this->name;
+        return view("person.index");
     }
     
     public function show($param) {
@@ -20,6 +21,10 @@ class PersonController extends Controller
         $this->name = $param;
         return $this->name;
     }
+    public function sendData() {
+        $code = $this->code;
+        $name = $this->name;
+    
+        return view("person.sendData", compact('code', 'name'));
+    } 
 }
-
-

@@ -6,6 +6,27 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+    private $code = 190313015;
+    private $name = Gifahri;
+    private $course, $task, $quiz, $mid_term, $final, $grade;
+    private $task =;
+    private $quiz =;
+    private $mid_term =;
+    private $final =;
+    private $grade =;
+
+    public function myCourse($course, $task, $quiz, $mid_term, $final){
+        $this->course = $course;
+        $this->task = $task;
+        $this->quiz = $quiz;
+        $this->mid_term = $mid_term;
+        $this->final = $final;
+        $this->grade = $this->calculateGrade();
+        return view('student/my_view',['code'=>$this->code,'name'=>''])
+
+        public function calculateGrade()
+        return $this->grade;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +35,6 @@ class StudentController extends Controller
     public function index()
     {
         //
-        return "This is Index";
     }
 
     /**
@@ -25,7 +45,6 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return "This is Gifahri ";
     }
 
     /**

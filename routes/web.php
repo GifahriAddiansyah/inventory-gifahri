@@ -36,3 +36,8 @@ Route::get('/homepage', function (){
 });
 
 Route::get('/person/send-data', 'PersonController@sendData');
+
+Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}',[StudentController::class,'MyCourse']);
+
+Route::get('/person/add','PersonController@add');
+Route::post('/person/addProcess','PersonController@addProcess');

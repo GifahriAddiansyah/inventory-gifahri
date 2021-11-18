@@ -41,3 +41,11 @@ Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}',[StudentContr
 
 Route::get('/person/add','PersonController@add');
 Route::post('/person/addProcess','PersonController@addProcess');
+
+Route::get('/barang','BarangController@index');
+Route::get('/barang/data','BarangController@data');
+Route::get('/barang/ppt','BarangController@input');
+Route::get('/barang/transaksi','BarangController@transaksi');
+Route::get('/barang/add','BarangController@add');
+
+Route::post('/barang/addProcess', 'BarangController@addProcess');
